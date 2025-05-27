@@ -763,7 +763,7 @@ TRANSLATIONS = {
             "environmental_impact": "Reduz as emissões de carbono",
             "operational_efficiency": "Automatiza processos, reduzindo o esforço manual"
         }
-    }. 
+    }, 
         "Hindi": {
         "irrigation_savings_calculator": "सिंचाई बचत कैलकुलेटर",
         "tool_description": "यह टूल विभिन्न सिंचाई विधियों, विशेष रूप से ईटी-आधारित सिंचाई से संभावित बचत और स्थिरता लाभों का एक अवलोकन प्रदान करता है।",
