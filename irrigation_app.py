@@ -102,6 +102,9 @@ def apply_styles():
         }
     @media print {
         html, body, .stApp, .block-container, .main, .appview-container {
+            zoom: 90% !important;    /* Most browsers (Chrome, Edge, Brave, Opera, etc.) */
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
             margin: 0 !important;
             font-size: 80% !important;
             padding: 0 !important;
