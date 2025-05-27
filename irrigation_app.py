@@ -144,14 +144,14 @@ def apply_styles():
             overflow: visible !important;
 
         }
-        /* Main content (column 2): 500px right */
+        /* Main content (column 2): 650px right */
         .stColumn:nth-of-type(2) {
             position: absolute !important;
-            left: 280px !important;
+            left: 300px !important;
             top: 0 !important;
-            width: 500px !important;
-            min-width: 500px !important;
-            max-width: 500px !important;
+            width: 650px !important;
+            min-width: 650px !important;
+            max-width: 650px !important;
             background: #fff !important;
             color: #000 !important;
             padding: 12px 8px 12px 12px !important;
