@@ -657,13 +657,12 @@ def main():
                         <p style='font-size: 16px; color:#004d24; font-weight: 600;'>Enhanced</p>
                     </div>
                 </div>
-                    <div style='margin-top: 5px; text-align: left;'>
+                    <div style='margin-top: -20px; text-align: left;'>
                         <h4 style='color:#004d24; font-weight: 700;'>{get_label(labels, 'key_benefits')}</h4>
                         <ul style='list-style: none; padding-left: 0; font-size: 14px;'>
                             <li>🔑 <strong>{get_label(labels, 'water_efficiency_benefit')}</strong></li>
                             <li>🌍 <strong>{get_label(labels, 'environmental_impact_benefit')}</strong></li>
                             <li>💡 <strong>{get_label(labels, 'operational_efficiency_benefit')}</strong></li>
-                            <p></p><p></p><p></p>
                         </ul>
                     </div>
                 </div>
