@@ -697,20 +697,6 @@ def main():
                 unsafe_allow_html=True
             )
 
-            # Render the charts after the table
-            fig1, fig2, fig3 = render_charts(df, currency)
-
-
-
-            # Display the charts
-            if fig1 and fig2 and fig3:
-                st.pyplot(fig1)
-                st.pyplot(fig2)
-                st.pyplot(fig3)
-            else:
-                st.error("Error rendering charts, please check data.")
-            
-
 
 if __name__ == '__main__':
     # Button export color styling
