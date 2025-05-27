@@ -84,7 +84,7 @@ TRANSLATIONS = {
             "operational_efficiency": "Automates processes, reducing manual effort"
         }
     },
-    "Thai": {
+    "ไทย": {
         "irrigation_savings_calculator": "เครื่องคำนวณการประหยัดน้ำในการชลประทาน",
         "tool_description": "เครื่องมือนี้ให้ภาพรวมเกี่ยวกับการประหยัดและประโยชน์ด้านความยั่งยืนจากวิธีการชลประทานต่าง ๆ โดยเฉพาะชลประทานที่ใช้ข้อมูล ET",
         "evapotranspiration_description": "การวางแผนการชลประทานโดยใช้ข้อมูลการระเหยและการคายน้ำ (ET) เกี่ยวข้องกับการใช้ข้อมูล ET เพื่อกำหนดเวลาที่จะให้น้ำและปริมาณน้ำที่ใช้ โดยมุ่งหวังการใช้น้ำอย่างมีประสิทธิภาพและสุขภาพของพืชที่ดีที่สุด แอปพลิเคชันนี้เปรียบเทียบวิธีการชลประทานหลายวิธีตามปัจจัยต่าง ๆ เช่น การใช้ทรัพยากรน้ำ การปล่อย CO₂ และต้นทุนการดำเนินงาน",
@@ -169,7 +169,7 @@ TRANSLATIONS = {
             "operational_efficiency": "ทำให้กระบวนการเป็นอัตโนมัติ ลดความพยายามของมนุษย์"
         }
     },
-    "Vietnamese": {
+    "Tiếng Việt": {
         "irrigation_savings_calculator": "Công Cụ Tính Toán Tiết Kiệm Tưới",
         "tool_description": "Công cụ này cung cấp tổng quan về tiềm năng tiết kiệm và lợi ích bền vững từ các phương pháp tưới khác nhau, đặc biệt là tưới dựa trên ET.",
         "evapotranspiration_description": "Lập lịch tưới dựa trên evapotranspiration (ET) sử dụng dữ liệu ET để xác định thời điểm và lượng nước tưới, nhằm sử dụng nước hiệu quả và đảm bảo sức khỏe tối ưu cho cây trồng. Ứng dụng này so sánh nhiều phương pháp tưới dựa trên các yếu tố như lượng nước tiêu thụ, lượng khí CO₂ phát thải và chi phí vận hành.",
@@ -254,7 +254,7 @@ TRANSLATIONS = {
             "operational_efficiency": "Tự động hóa quy trình, giảm công sức lao động"
         }
     },
-    "Bahasa": {
+    "Bahasa Indonesia": {
         "irrigation_savings_calculator": "Kalkulator Penghematan Irigasi",
         "tool_description": "Alat ini memberikan gambaran tentang potensi penghematan dan manfaat keberlanjutan dari berbagai metode irigasi, khususnya irigasi berbasis ET.",
         "evapotranspiration_description": "Penjadwalan irigasi berbasis Evapotranspirasi (ET) melibatkan penggunaan data ET untuk menentukan kapan dan berapa banyak air yang diberikan, bertujuan untuk efisiensi penggunaan air dan kesehatan tanaman yang optimal. Aplikasi ini membandingkan beberapa metode irigasi berdasarkan konsumsi air, emisi CO₂, dan biaya operasional.",
@@ -339,7 +339,7 @@ TRANSLATIONS = {
             "operational_efficiency": "Mengotomatisasi proses, mengurangi tenaga kerja manual"
         }
     },
-    "Japanese": {
+    "日本語": {
         "irrigation_savings_calculator": "灌漑節約計算ツール",
         "tool_description": "このツールは、さまざまな灌漑方法、特にET（蒸発散）に基づく灌漑の節約効果と持続可能性の利点についての概要を提供します。",
         "evapotranspiration_description": "蒸発散（ET）に基づく灌漑スケジューリングは、植物にいつ・どれだけ水を与えるかをETデータに基づいて決定し、水の効率的な利用と最適な植物の健康を目指します。このアプリケーションでは、水の消費量、CO₂排出量、運用コストなどの要素に基づき、複数の灌漑方法を比較します。",
@@ -424,7 +424,7 @@ TRANSLATIONS = {
             "operational_efficiency": "プロセスを自動化し、手作業を削減します"
         }
     },
-        "Chinese": {
+        "中文": {
         "irrigation_savings_calculator": "灌溉节省计算器",
         "tool_description": "该工具提供了不同灌溉方式，特别是基于ET的灌溉方式在节省和可持续性方面的总体概览。",
         "evapotranspiration_description": "基于蒸散（ET）的灌溉调度涉及使用ET数据来确定植物的灌溉时间和用水量，旨在高效利用水资源并实现最佳植物健康。本应用根据用水量、二氧化碳排放量和运营成本等因素，对多种灌溉方式进行比较。",
@@ -509,7 +509,7 @@ TRANSLATIONS = {
             "operational_efficiency": "流程自动化，减少人工操作"
         }
     }, 
-    "Arabic": {
+    "العربية": {
         "irrigation_savings_calculator": "حاسبة توفير الري",
         "tool_description": "يوفر هذا الأداة نظرة عامة على إمكانيات التوفير وفوائد الاستدامة من طرق الري المختلفة، خاصة الري المعتمد على التبخر والنتح (ET).",
         "evapotranspiration_description": "يتضمن جدولة الري المعتمد على التبخر والنتح (ET) استخدام بيانات ET لتحديد متى وكمية الري للنباتات، بهدف الاستخدام الفعال للمياه وصحة النبات المثلى. يقارن هذا التطبيق بين عدة طرق ري بناءً على استهلاك المياه، وانبعاثات ثاني أكسيد الكربون، وتكاليف التشغيل.",
@@ -594,7 +594,7 @@ TRANSLATIONS = {
             "operational_efficiency": "يؤتمت العمليات ويقلل الجهد اليدوي"
         }
     },
-    "Spanish": {
+    "Español": {
         "irrigation_savings_calculator": "Calculadora de Ahorro en Riego",
         "tool_description": "Esta herramienta proporciona una visión general del ahorro potencial y los beneficios de sostenibilidad de diferentes métodos de riego, en particular el riego basado en ET.",
         "evapotranspiration_description": "La programación de riego basada en la evapotranspiración (ET) implica el uso de datos de ET para determinar cuándo y cuánta agua aplicar a las plantas, buscando un uso eficiente del agua y una salud óptima de las plantas. Esta aplicación compara varios métodos de riego basados en factores como el consumo de agua, las emisiones de CO₂ y los costes operativos.",
@@ -679,7 +679,7 @@ TRANSLATIONS = {
             "operational_efficiency": "Automatiza procesos, reduciendo el esfuerzo manual"
         }
     },
-    "Portuguese": {
+    "Português": {
         "irrigation_savings_calculator": "Calculadora de Economia de Irrigação",
         "tool_description": "Esta ferramenta fornece uma visão geral do potencial de economia e dos benefícios de sustentabilidade de diferentes métodos de irrigação, especialmente a irrigação baseada em ET.",
         "evapotranspiration_description": "O agendamento de irrigação baseado em evapotranspiração (ET) envolve o uso de dados de ET para determinar quando e quanto irrigar as plantas, visando o uso eficiente da água e a saúde ideal das plantas. Este aplicativo compara vários métodos de irrigação com base em fatores como consumo de água, emissões de CO₂ e custos operacionais.",
@@ -764,7 +764,7 @@ TRANSLATIONS = {
             "operational_efficiency": "Automatiza processos, reduzindo o esforço manual"
         }
     }, 
-        "Hindi": {
+    "हिन्दी": {
         "irrigation_savings_calculator": "सिंचाई बचत कैलकुलेटर",
         "tool_description": "यह टूल विभिन्न सिंचाई विधियों, विशेष रूप से ईटी-आधारित सिंचाई से संभावित बचत और स्थिरता लाभों का एक अवलोकन प्रदान करता है।",
         "evapotranspiration_description": "ईटी (एवापोट्रांसपिरेशन)-आधारित सिंचाई शेड्यूलिंग में पौधों को कब और कितना पानी देना है यह तय करने के लिए ईटी डेटा का उपयोग किया जाता है, जिसका उद्देश्य जल का कुशल उपयोग और पौधों का सर्वोत्तम स्वास्थ्य है। यह एप्लिकेशन पानी की खपत, CO₂ उत्सर्जन और संचालन लागत जैसे कारकों के आधार पर विभिन्न सिंचाई विधियों की तुलना करता है।",
