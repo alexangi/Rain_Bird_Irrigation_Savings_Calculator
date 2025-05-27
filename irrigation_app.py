@@ -107,7 +107,7 @@ def apply_styles():
             width: 1000px !important;
             background: #fff !important;
             box-sizing: border-box !important;
-            overflow: visible !important;
+
         }
         /* Stack columns vertically for print */
         .stColumns {
@@ -137,7 +137,7 @@ def apply_styles():
             box-sizing: border-box !important;
             z-index: 10;
             overflow-wrap: break-word !important;
-            overflow: visible !important;
+
         }
         /* Main content (column 2): 600px right */
         .stColumn:nth-of-type(2) {
@@ -153,7 +153,6 @@ def apply_styles():
             box-sizing: border-box !important;
             z-index: 10;
             overflow-wrap: break-word !important;
-            overflow: visible !important;
         }
     }
     </style>
