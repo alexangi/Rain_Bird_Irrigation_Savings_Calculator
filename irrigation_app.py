@@ -663,6 +663,7 @@ def main():
                             <li>🔑 <strong>{get_label(labels, 'water_efficiency_benefit')}</strong></li>
                             <li>🌍 <strong>{get_label(labels, 'environmental_impact_benefit')}</strong></li>
                             <li>💡 <strong>{get_label(labels, 'operational_efficiency_benefit')}</strong></li>
+                            <p></p><p></p><p></p>
                         </ul>
                     </div>
                 </div>
@@ -670,10 +671,21 @@ def main():
                 unsafe_allow_html=True
             )
 
-            st.markdown(
+           
+            # Create df with the relevant data for charts
+            df = pd.DataFrame([{
+                'Method': get_label(labels, f'method_{m.lower().replace("-", "").replace(" ", "")}'),
+                'Cost_k': round(total[m] / 1000, 2),
+                'Water': round(usage_per_year[m], 2),
+                'CO2': round(usage_per_year[m] * 0.5 / 1000, 2)
+            } for m in usage_per_year])
+
+            # Call the function to display the table with units
+            display_table(df, labels, currency)
+
+                        st.markdown(
                 f"""
                 <div class="footer">
-                <p></p><p></p><p></p>
                     <div class="disclaimer">
                         <strong>{TRANSLATIONS[lang].get('disclaimer_text', '')}</strong>
                     </div>
@@ -685,17 +697,6 @@ def main():
                 """,
                 unsafe_allow_html=True
             )
-            
-            # Create df with the relevant data for charts
-            df = pd.DataFrame([{
-                'Method': get_label(labels, f'method_{m.lower().replace("-", "").replace(" ", "")}'),
-                'Cost_k': round(total[m] / 1000, 2),
-                'Water': round(usage_per_year[m], 2),
-                'CO2': round(usage_per_year[m] * 0.5 / 1000, 2)
-            } for m in usage_per_year])
-
-            # Call the function to display the table with units
-            display_table(df, labels, currency)
 
             # Render the charts after the table
             fig1, fig2, fig3 = render_charts(df, currency)
