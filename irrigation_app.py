@@ -329,7 +329,6 @@ def get_inputs():
     # Full width button in column 1
     st.markdown("<br>", unsafe_allow_html=True)  # Add some space above the button
     calculate_button = st.button(labels['calculate_button'], use_container_width=True)  # Language-specific label for button
-    print_view = st.button("🖨️ Print-Friendly View", key="print_view_btn")
 
     return client, area, unit, years, currency, water_price, city, lang, labels
 
@@ -699,65 +698,7 @@ def main():
                 st.pyplot(fig3)
             else:
                 st.error("Error rendering charts, please check data.")
-
-# ---------------------------- Print View Button ----------------------------
-if print_view and "calc_results" in st.session_state:
-    res = st.session_state["calc_results"]
-    labels = TRANSLATIONS[st.session_state.lang]
-
-    st.markdown("""
-        <h2 style='color:#004d24;'>Irrigation Savings Summary</h2>
-        <hr>
-    """, unsafe_allow_html=True)
-
-    st.write(f"**Project:** {res.get('client', '')}")
-    st.write(f"**City:** {res.get('city', '')}")
-    st.write(f"**Area:** {res.get('area', 0)} {res.get('unit', '')}")
-    st.write(f"**Years:** {res.get('years', 0)}")
-    st.write(f"**Currency:** {res.get('currency', '')}")
-
-    st.markdown(f"""
-    <ul>
-        <li><b>Annual Savings:</b> {res['currency']} {res['annual_savings']:,.2f}</li>
-        <li><b>Total Savings:</b> {res['currency']} {res['total_savings']:,.2f}</li>
-        <li><b>CapEx Difference:</b> {res['currency']} {res['capex_diff']:,.2f}</li>
-        <li><b>Payback:</b> {res['payback']}</li>
-        <li><b>CO₂ Savings:</b> {res['co2_saving']:,.2f} tons</li>
-    </ul>
-    """, unsafe_allow_html=True)
-
-    # Table
-    st.write("### Method Comparison Table")
-    # (Recompute your dataframe here if needed, or reuse the last one)
-    df = pd.DataFrame([
-        {
-            "Method": m,
-            "Cost (k)": round(res['total'][m]/1000, 2),
-            "Water (m³)": round(res['usage_per_year'][m], 2),
-            "CO2 (tons)": round(res['usage_per_year'][m]*0.5/1000, 2)
-        }
-        for m in res['usage_per_year']
-    ])
-    st.dataframe(df, use_container_width=True)
-
-    # Charts
-    figs = render_charts(df, res['currency'])
-    for fig in figs:
-        st.pyplot(fig)
-
-    st.markdown("""
-        <div style="font-size:12px; margin-top:30px;">
-        <b>Disclaimer:</b> The information provided is for estimation purposes only. © 2025 Rain Bird Corporation.
-        </div>
-    """, unsafe_allow_html=True)
-
-    st.markdown("""
-        <script>
-            window.print();
-        </script>
-    """, unsafe_allow_html=True)
-
-    st.stop()  # Prevents other Streamlit content from rendering if you want ONLY this for print            
+            
 
 
 if __name__ == '__main__':
