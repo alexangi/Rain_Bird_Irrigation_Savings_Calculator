@@ -671,17 +671,20 @@ def main():
             )
 
             st.markdown(
-                """
+                f"""
                 <div class="footer">
                     <div class="disclaimer">
-                        <strong>Disclaimer:</strong> The information provided in this tool is for informational purposes only. The savings, environmental benefits, and other calculations are estimates based on the data provided. Actual results may vary.
+                        <strong>{TRANSLATIONS[lang].get('disclaimer_text', '')}</strong>
                     </div>
                     <div class="credit">
-                        <strong>© 2025 Rain Bird Corporation. All rights reserved.</strong> | <a href="https://www.rainbird.com" target="_blank" style="color: #00703c;">Visit our website</a>
+                        <strong>© 2025 Rain Bird Corporation. All rights reserved.</strong> | 
+                        <a href="https://www.rainbird.com" target="_blank" style="color: #00703c;">
+                            {TRANSLATIONS[lang].get('learn_more_text', 'Visit our website')}
+                        </a>
                     </div>
                 </div>
                 """,
-            unsafe_allow_html=True
+                unsafe_allow_html=True
             )
             
             # Create df with the relevant data for charts
