@@ -599,7 +599,7 @@ def main():
             # Display the savings and sustainability overview using translated terms
             st.markdown(
                 f"""
-                <div style='background-color:#e6f4ea;padding:5px 25px;border-radius:10px;margin-bottom:30px;'>
+                <div style='background-color:#e6f4ea;padding:5px 5px;border-radius:10px;margin-bottom:50px;'>
                     <h3 style='color:#004d24;font-weight: 700; text-align:center;'>{get_label(labels, 'savings_and_sustainability')}</h3>
                     <p style='font-size: 14px; color:#004d24; line-height:1.6;'>
                         {get_label(labels, 'annual_savings_description')}
@@ -607,7 +607,7 @@ def main():
                         {get_label(labels, 'long_term_planning')}
                     </p>
                     <!-- Summary of input data used in calculations -->
-                    <div style="margin-top: 15px; font-size: 14px; color:#004d24;">
+                    <div style="margin-top: 5px; font-size: 14px; color:#004d24;">
                         <strong>{get_label(labels, 'input_data_summary')}</strong>:
                         <ul>
                             <li><strong>{get_label(labels, 'input_city')}:</strong> {city}</li>
