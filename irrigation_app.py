@@ -670,6 +670,19 @@ def main():
                 unsafe_allow_html=True
             )
 
+            st.markdown(
+                """
+                <div class="footer">
+                    <div class="disclaimer">
+                        <strong>Disclaimer:</strong> The information provided in this tool is for informational purposes only. The savings, environmental benefits, and other calculations are estimates based on the data provided. Actual results may vary.
+                    </div>
+                    <div class="credit">
+                        <strong>© 2025 Rain Bird Corporation. All rights reserved.</strong> | <a href="https://www.rainbird.com" target="_blank" style="color: #00703c;">Visit our website</a>
+                    </div>
+                </div>
+                """,
+            unsafe_allow_html=True
+            )
             
             # Create df with the relevant data for charts
             df = pd.DataFrame([{
@@ -685,19 +698,7 @@ def main():
             # Render the charts after the table
             fig1, fig2, fig3 = render_charts(df, currency)
 
-            st.markdown(
-                """
-                <div class="footer">
-                    <div class="disclaimer">
-                        <strong>Disclaimer:</strong> The information provided in this tool is for informational purposes only. The savings, environmental benefits, and other calculations are estimates based on the data provided. Actual results may vary.
-                    </div>
-                    <div class="credit">
-                        <strong>© 2025 Rain Bird Corporation. All rights reserved.</strong> | <a href="https://www.rainbird.com" target="_blank" style="color: #00703c;">Visit our website</a>
-                    </div>
-                </div>
-                """,
-            unsafe_allow_html=True
-            )
+
 
             # Display the charts
             if fig1 and fig2 and fig3:
