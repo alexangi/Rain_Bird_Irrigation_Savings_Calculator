@@ -103,6 +103,7 @@ def apply_styles():
     @media print {
         html, body, .stApp, .block-container, .main, .appview-container {
             margin: 0 !important;
+            font-size: 80% !important;
             padding: 0 !important;
             width: 1000px !important;
             background: #fff !important;
@@ -141,14 +142,14 @@ def apply_styles():
             overflow: visible !important;
 
         }
-        /* Main content (column 2): 600px right */
+        /* Main content (column 2): 500px right */
         .stColumn:nth-of-type(2) {
             position: absolute !important;
             left: 280px !important;
             top: 0 !important;
-            width: 600px !important;
-            min-width: 600px !important;
-            max-width: 600px !important;
+            width: 500px !important;
+            min-width: 500px !important;
+            max-width: 500px !important;
             background: #fff !important;
             color: #000 !important;
             padding: 12px 8px 12px 12px !important;
