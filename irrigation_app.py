@@ -111,8 +111,17 @@ def apply_styles():
         }
         @page {
             size: A4 portrait;
-            margin: 30px;
+            margin: 20mm;
         }
+        /* Stack columns vertically for print */
+        .stColumns {
+            display: block !important;
+        }
+        .stColumn {
+            width: 100% !important;
+            display: block !important;
+            position: static !important;
+        }    
         /* Hide ALL columns except 2 */
         .stColumn:not(:nth-of-type(2)) {
             display: none !important;
@@ -125,7 +134,6 @@ def apply_styles():
             width: 300px !important;
             min-width: 300px !important;
             max-width: 300px !important;
-            height: 100vh !important;
             background: #004d24 !important;
             color: #fff !important;
             padding: 24px 16px 24px 24px !important;
@@ -143,7 +151,6 @@ def apply_styles():
             width: 600px !important;
             min-width: 600px !important;
             max-width: 600px !important;
-            height: 100vh !important;
             background: #fff !important;
             color: #000 !important;
             padding: 12px 8px 12px 12px !important;
