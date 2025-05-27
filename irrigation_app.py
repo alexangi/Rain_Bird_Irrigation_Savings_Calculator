@@ -683,7 +683,7 @@ def main():
             # Call the function to display the table with units
             display_table(df, labels, currency)
 
-                        st.markdown(
+            st.markdown(
                 f"""
                 <div class="footer">
                     <div class="disclaimer">
