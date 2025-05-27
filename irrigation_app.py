@@ -102,7 +102,7 @@ def apply_styles():
         }
     @media print {
         html, body, .stApp, .block-container, .main, .appview-container {
-            zoom: 100% !important;    /* Most browsers (Chrome, Edge, Brave, Opera, etc.) */
+            zoom: 95% !important;    /* Most browsers (Chrome, Edge, Brave, Opera, etc.) */
             -webkit-print-color-adjust: exact !important;
             print-color-adjust: exact !important;
             margin: 0 !important;
