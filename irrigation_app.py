@@ -676,8 +676,9 @@ def main():
                     <div class="disclaimer">
                         <strong>{TRANSLATIONS[lang].get('disclaimer_text', '')}</strong>
                     </div>
-                    <                    <div class="credit">
+                        <div class="credit">
                         <strong>© 2025 Rain Bird Corporation. All rights reserved.</strong> | <a href="https://www.rainbird.com" target="_blank" style="color: #00703c;">Visit our website</a>
+                        <p></p><p></p><p></p>
                     </div>
                 </div>
                 """,
