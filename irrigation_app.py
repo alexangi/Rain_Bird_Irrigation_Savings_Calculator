@@ -116,7 +116,7 @@ def apply_styles():
             display: block !important;
         }
         .stColumn {
-            width: 100% !important;
+            width: 80% !important;
             display: block !important;
             position: static !important;
         }    
