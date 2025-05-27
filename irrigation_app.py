@@ -109,10 +109,6 @@ def apply_styles():
             box-sizing: border-box !important;
             overflow: visible !important;
         }
-        @page {
-            size: A4 portrait;
-            margin: 20mm;
-        }
         /* Stack columns vertically for print */
         .stColumns {
             display: block !important;
