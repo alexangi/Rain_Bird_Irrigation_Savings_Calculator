@@ -102,11 +102,10 @@ def apply_styles():
         }
     @media print {
         html, body, .stApp, .block-container, .main, .appview-container {
-            zoom: 90% !important;    /* Most browsers (Chrome, Edge, Brave, Opera, etc.) */
+            zoom: 100% !important;    /* Most browsers (Chrome, Edge, Brave, Opera, etc.) */
             -webkit-print-color-adjust: exact !important;
             print-color-adjust: exact !important;
             margin: 0 !important;
-            font-size: 80% !important;
             padding: 0 !important;
             width: 1000px !important;
             background: #fff !important;
@@ -119,7 +118,7 @@ def apply_styles():
             display: block !important;
         }
         .stColumn {
-            width: 80% !important;
+            width: 100% !important;
             display: block !important;
             position: static !important;
         }    
