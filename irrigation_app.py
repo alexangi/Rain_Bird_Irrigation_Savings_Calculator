@@ -102,7 +102,7 @@ def apply_styles():
         }
     @media print {
         html, body, .stApp, .block-container, .main, .appview-container {
-            zoom: 95% !important;    /* Most browsers (Chrome, Edge, Brave, Opera, etc.) */
+            zoom: 90% !important;    /* Most browsers (Chrome, Edge, Brave, Opera, etc.) */
             -webkit-print-color-adjust: exact !important;
             print-color-adjust: exact !important;
             margin: 0 !important;
@@ -118,7 +118,7 @@ def apply_styles():
             display: block !important;
         }
         .stColumn {
-            width: 100% !important;
+            width: 95% !important;
             display: block !important;
             position: static !important;
         }    
@@ -144,14 +144,14 @@ def apply_styles():
             overflow: visible !important;
 
         }
-        /* Main content (column 2): 900px right */
+        /* Main content (column 2): 800px right */
         .stColumn:nth-of-type(2) {
             position: absolute !important;
             left: 300px !important;
             top: 0 !important;
-            width: 900px !important;
-            min-width: 900px !important;
-            max-width: 900px !important;
+            width: 800px !important;
+            min-width: 800px !important;
+            max-width: 800px !important;
             background: #fff !important;
             color: #000 !important;
             padding: 12px 8px 12px 12px !important;
