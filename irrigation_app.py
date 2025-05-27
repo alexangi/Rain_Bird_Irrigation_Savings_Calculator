@@ -58,6 +58,16 @@ def apply_styles():
             color: #000 !important;
             font-family: 'DejaVu Sans'!important;
         }
+            /* Hide Streamlit header, footer, and hamburger menu */
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            header {visibility: hidden;}
+            /* Optionally hide help button and running status */
+            .stActionButton {display: none;}
+            .st-emotion-cache-1jicfl2 {display: none;} /* Some Streamlit icons */
+            .stDeployButton {display: none;}
+            /* Hide top right icon bar (beta, not always present) */
+            .css-1avcm0n {display: none;}
         /* Sidebar Styles */
         section[data-testid='stSidebar'] {
             background: #004d24 !important;
