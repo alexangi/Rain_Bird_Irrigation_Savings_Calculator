@@ -520,6 +520,16 @@ def main():
         # Get the corresponding labels for the selected language
         labels = TRANSLATIONS[st.session_state.lang]
 
+        # >>>>>>>>>>>> MOVE THIS UP <<<<<<<<<<<<<<
+        method_map = {
+            'Manual': get_label(labels, 'method_manual'),
+            'Truck': get_label(labels, 'method_truck'),
+            'Auto': get_label(labels, 'method_auto'),
+            'ET-Based': get_label(labels, 'method_etbased')
+        }
+        method_map_rev = {v: k for k, v in method_map.items()}
+        # >>>>>>>>>>>> MOVE THIS UP <<<<<<<<<<<<<<
+
         # Project inputs with translated labels
         city = st.selectbox(get_label(labels, 'input_city'), options=list(ET_DATA.keys()), index=0)
         unit = st.selectbox(get_label(labels, 'input_unit'), options=list(UNIT_MULTIPLIERS.keys()), index=0)
@@ -533,8 +543,7 @@ def main():
             base_method_display = st.selectbox(get_label(labels, 'base_method'), options=list(method_map.values()), key='base_method')
         with c2:
             comp_method_display = st.selectbox(get_label(labels, 'comparison_method'), options=[get_label(labels, 'method_auto'), get_label(labels, 'method_etbased')], key='comparison_method')
-        
-        st.caption(f"Estimated ET₀ for {city}: {ET_DATA[city]} mm/year")
+
 
         # Add the "Calculate" button with an emoji at the bottom of col1
         st.markdown("<br>", unsafe_allow_html=True)  # Add some space above the button
