@@ -424,7 +424,7 @@ TRANSLATIONS = {
             "operational_efficiency": "プロセスを自動化し、手作業を削減します"
         }
     },
-        "中文": {
+        "简体中文": {
         "irrigation_savings_calculator": "灌溉节省计算器",
         "tool_description": "该工具提供了不同灌溉方式，特别是基于ET的灌溉方式在节省和可持续性方面的总体概览。",
         "evapotranspiration_description": "基于蒸散（ET）的灌溉调度涉及使用ET数据来确定植物的灌溉时间和用水量，旨在高效利用水资源并实现最佳植物健康。本应用根据用水量、二氧化碳排放量和运营成本等因素，对多种灌溉方式进行比较。",
