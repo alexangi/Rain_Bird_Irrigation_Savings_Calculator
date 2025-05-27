@@ -530,7 +530,6 @@ def main():
 
     with col1:
         # Collect project inputs with translated labels
-        lang = st.selectbox(get_label(TRANSLATIONS[st.session_state.lang], 'input_language')
         city = st.selectbox(get_label(labels, 'input_city'), options=list(ET_DATA.keys()), index=0)
         unit = st.selectbox(get_label(labels, 'input_unit'), options=list(UNIT_MULTIPLIERS.keys()), index=0)
         area = st.number_input(get_label(labels, 'input_area'), min_value=0.0, value=1600.0)
