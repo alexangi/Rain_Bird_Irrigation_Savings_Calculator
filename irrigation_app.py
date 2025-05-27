@@ -503,7 +503,11 @@ def main():
     apply_styles()
 
     # Language dropdown now correctly triggers the language change and rerun
-    
+    lang = st.selectbox(
+        get_label(TRANSLATIONS[st.session_state.lang], 'input_language'),
+        list(TRANSLATIONS.keys()),
+        index=list(TRANSLATIONS.keys()).index(st.session_state.lang)  # Default value from session state
+    )
 
     # Update session language state when changed
     if lang != st.session_state.lang:
@@ -526,11 +530,7 @@ def main():
 
     with col1:
         # Collect project inputs with translated labels
-        lang = st.selectbox(
-        get_label(TRANSLATIONS[st.session_state.lang], 'input_language'),
-        list(TRANSLATIONS.keys()),
-        index=list(TRANSLATIONS.keys()).index(st.session_state.lang)  # Default value from session state
-        )
+        lang = st.selectbox(get_label(TRANSLATIONS[st.session_state.lang], 'input_language')
         city = st.selectbox(get_label(labels, 'input_city'), options=list(ET_DATA.keys()), index=0)
         unit = st.selectbox(get_label(labels, 'input_unit'), options=list(UNIT_MULTIPLIERS.keys()), index=0)
         area = st.number_input(get_label(labels, 'input_area'), min_value=0.0, value=1600.0)
