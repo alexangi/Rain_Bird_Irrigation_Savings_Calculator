@@ -502,34 +502,25 @@ def main():
     # Apply styles (unchanged)
     apply_styles()
 
-    # Language dropdown now correctly triggers the language change and rerun
-    lang = st.selectbox(
-        get_label(TRANSLATIONS[st.session_state.lang], 'input_language'),
-        list(TRANSLATIONS.keys()),
-        index=list(TRANSLATIONS.keys()).index(st.session_state.lang)  # Default value from session state
-    )
-
-    # Update session language state when changed
-    if lang != st.session_state.lang:
-        st.session_state.lang = lang  # Save the selected language to session state
-        st.rerun()  # Trigger a rerun to apply language change
-
-    # Now get the corresponding labels for the selected language
-    labels = TRANSLATIONS[st.session_state.lang]  # Translate labels based on selected language
-
-    # Define methods for irrigation calculation
-    method_map = {
-        'Manual': get_label(labels, 'method_manual'),
-        'Truck': get_label(labels, 'method_truck'),
-        'Auto': get_label(labels, 'method_auto'),
-        'ET-Based': get_label(labels, 'method_etbased')
-    }
-    method_map_rev = {v: k for k, v in method_map.items()}  # Reverse map for getting method names back
-
     col1, col2 = st.columns([1.1, 1.5], gap='large')  # Define col1 and col2
 
     with col1:
-        # Collect project inputs with translated labels
+        # Move language dropdown here as the FIRST widget in col1
+        lang = st.selectbox(
+            get_label(TRANSLATIONS[st.session_state.lang], 'input_language'),
+            list(TRANSLATIONS.keys()),
+            index=list(TRANSLATIONS.keys()).index(st.session_state.lang)
+        )
+
+        # Update session language state when changed
+        if lang != st.session_state.lang:
+            st.session_state.lang = lang
+            st.rerun()
+
+        # Get the corresponding labels for the selected language
+        labels = TRANSLATIONS[st.session_state.lang]
+
+        # Project inputs with translated labels
         city = st.selectbox(get_label(labels, 'input_city'), options=list(ET_DATA.keys()), index=0)
         unit = st.selectbox(get_label(labels, 'input_unit'), options=list(UNIT_MULTIPLIERS.keys()), index=0)
         area = st.number_input(get_label(labels, 'input_area'), min_value=0.0, value=1600.0)
@@ -547,15 +538,24 @@ def main():
 
         # Add the "Calculate" button with an emoji at the bottom of col1
         st.markdown("<br>", unsafe_allow_html=True)  # Add some space above the button
-        calculate_button = st.button(labels['calculate_button'], use_container_width=True)  # Language-specific label for button
+        calculate_button = st.button(labels['calculate_button'], use_container_width=True)
         st.markdown(
-        """
-        <div style="font-size: 16px; color: #004d24; text-align: center; margin-top: 5x;">
-            <strong>To print this page, press "Ctrl + P" (Windows) or "Cmd + P" (Mac) and select "Save as PDF".</strong>
-        </div>
-        """,
-        unsafe_allow_html=True
+            """
+            <div style="font-size: 16px; color: #004d24; text-align: center; margin-top: 5x;">
+                <strong>To print this page, press "Ctrl + P" (Windows) or "Cmd + P" (Mac) and select "Save as PDF".</strong>
+            </div>
+            """,
+            unsafe_allow_html=True
         )
+
+    # method_map and method_map_rev need to use the updated labels, so move this after lang selection
+    method_map = {
+        'Manual': get_label(labels, 'method_manual'),
+        'Truck': get_label(labels, 'method_truck'),
+        'Auto': get_label(labels, 'method_auto'),
+        'ET-Based': get_label(labels, 'method_etbased')
+    }
+    method_map_rev = {v: k for k, v in method_map.items()}
         
     with col2:
 
