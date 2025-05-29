@@ -68,6 +68,39 @@ TRANSLATIONS = {
         "calculate_button": "🔄 Calculate",
         "payback": "Payback Period",
         "co2_saving": "CO₂ Reduction",
+        "calculation_summary_title": "Calculation Summary",
+        "calculation_summary_body": """
+        <b>Irrigation Savings Calculator — How Your Savings Are Calculated</b><br>
+        All figures and methodology are based on real-life Thai landscape projects, as detailed in the official report (see enclosed PDF).
+        <ul>
+        <li><b>User Inputs:</b> Area, unit, city (climate), years, water price, currency, and irrigation methods.</li>
+        <li><b>City Evapotranspiration (ET):</b> Annual average ET (mm), per city, as per Thai climate data.</li>
+        <li><b>Unit Multipliers:</b> m², Rai (1,600 m²), Hectare (10,000 m²), Acre (4,046.86 m²).</li>
+        <li><b>Exchange Rates:</b> THB, USD, SGD, VND, etc.</li>
+        <li><b>Construction Coefficient:</b> City-specific cost scaling, as per Thai cost benchmarks.</li>
+        <li><b>Base Capital Costs (per 1 Rai):</b>
+            <ul>
+            <li>Manual: 613,006 THB</li>
+            <li>Truck: 2,160,000 THB</li>
+            <li>Auto/ET-Based: 280,901.4 THB</li>
+            </ul>
+            (All capital costs are extracted from the PDF’s real-life project tables.)
+        </li>
+        <li><b>Water Use Multiplier (per year):</b>
+            <ul>
+            <li>Manual: 6× ET</li>
+            <li>Truck: 8× ET</li>
+            <li>Auto: 1.3× ET</li>
+            <li>ET-Based: 1.0× ET</li>
+            </ul>
+        </li>
+        <li><b>OPEX Split:</b> Labor 40%, Electricity 30%, Water 30% (reflecting the PDF’s breakdown).</li>
+        <li><b>CO₂ Savings:</b> Calculated as 0.5 tons per 1,000 m³ water saved.</li>
+        </ul>
+        <p><i>All figures are sourced from actual cost tables and project experience, as detailed in the 
+        <a href="https://github.com/alexangi/Rain_Bird_Irrigation_Savings_Calculator/blob/375a526e58e82d1c39c9a79a1ed5e80805d185dc/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%99%E0%B8%B3%E0%B9%80%E0%B8%AA%E0%B8%99%E0%B8%AD%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%9B%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B8%A3%E0%B8%94%E0%B8%99%E0%B9%89%E0%B8%B5%E0%B8%95.pdf" target="_blank">official PDF report (Thai)</a>.
+        </i></p>
+        """,
         "city_coefficient": "City Cost Coefficient",
         "construction_coefficient": "Construction Cost Coefficient",
         "water_efficiency": "Water Efficiency",
@@ -113,6 +146,39 @@ TRANSLATIONS = {
         "input_language": "ภาษา",
         "input_data_summary": "สรุปข้อมูลที่ป้อน",
         "years": "ปี",
+        "calculation_summary_title": "สรุปวิธีการคำนวณ",
+        "calculation_summary_body": """
+        <b>โปรแกรมคำนวณการประหยัดต้นทุนระบบรดน้ำ — วิธีคำนวณต้นทุนและการประหยัด</b><br>
+        ตัวเลขและวิธีการคำนวณทั้งหมดอ้างอิงจากโครงการจริงในประเทศไทย โดยดูรายละเอียดในรายงาน PDF ที่แนบมาด้วย
+        <ul>
+        <li><b>ข้อมูลที่ผู้ใช้ระบุ:</b> พื้นที่ หน่วย เมือง (ภูมิอากาศ) จำนวนปี ราคาน้ำ สกุลเงิน และประเภทวิธีรดน้ำ</li>
+        <li><b>ค่าการระเหยและการคายน้ำ (ET) ของแต่ละเมือง:</b> ค่าเฉลี่ย ET ต่อปี (มม.) ตามข้อมูลสภาพภูมิอากาศของไทย</li>
+        <li><b>ตัวคูณหน่วยพื้นที่:</b> ตารางเมตร (m²), ไร่ (1,600 m²), เฮกตาร์ (10,000 m²), เอเคอร์ (4,046.86 m²)</li>
+        <li><b>อัตราแลกเปลี่ยน:</b> บาท (THB), ดอลลาร์สหรัฐ (USD), ดอลลาร์สิงคโปร์ (SGD), ดอง (VND) ฯลฯ</li>
+        <li><b>สัมประสิทธิ์ต้นทุนงานก่อสร้าง:</b> ตัวคูณตามเมือง อ้างอิงมาตรฐานต้นทุนของไทย</li>
+        <li><b>ต้นทุนคงที่ต่อ 1 ไร่ (อ้างอิงจากรายงาน PDF):</b>
+            <ul>
+            <li>แรงงานคน: 613,006 บาท</li>
+            <li>รถบรรทุกน้ำ: 2,160,000 บาท</li>
+            <li>ระบบอัตโนมัติ/ET-Based: 280,901.4 บาท</li>
+            </ul>
+            (ตัวเลขต้นทุนคงที่ทั้งหมดนำมาจากตารางโครงการจริงใน PDF)
+        </li>
+        <li><b>ตัวคูณการใช้น้ำ (ต่อปี):</b>
+            <ul>
+            <li>แรงงานคน: 6× ET</li>
+            <li>รถบรรทุกน้ำ: 8× ET</li>
+            <li>ระบบอัตโนมัติ: 1.3× ET</li>
+            <li>ET-Based: 1.0× ET</li>
+            </ul>
+        </li>
+        <li><b>สัดส่วนค่าใช้จ่ายผันแปร (OPEX):</b> แรงงาน 40% ไฟฟ้า 30% น้ำ 30% (อิงตามรายงาน PDF)</li>
+        <li><b>การประหยัดคาร์บอนไดออกไซด์ (CO₂):</b> คำนวณจากน้ำที่ประหยัดได้ 1,000 ลบ.ม. = 0.5 ตัน CO₂</li>
+        </ul>
+        <p><i>ตัวเลขและสูตรทั้งหมดมาจากตารางต้นทุนจริงและประสบการณ์โครงการ ตามรายละเอียดใน 
+        <a href="https://github.com/alexangi/Rain_Bird_Irrigation_Savings_Calculator/blob/375a526e58e82d1c39c9a79a1ed5e80805d185dc/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%99%E0%B8%B3%E0%B9%80%E0%B8%AA%E0%B8%99%E0%B8%AD%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%9B%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B8%A3%E0%B8%94%E0%B8%99%E0%B9%89%E0%B8%B5%E0%B8%95.pdf" target="_blank">รายงาน PDF ฉบับจริง (ภาษาไทย)</a>
+        </i></p>
+        """,
         "exec_summary": "สรุปการบริหาร",
         "base_method": "วิธีการฐาน",
         "comparison_method": "วิธีการเปรียบเทียบ",
@@ -191,6 +257,39 @@ TRANSLATIONS = {
         "input_currency": "Tiền tệ",
         "input_water_cost": "Giá nước trên mỗi m³",
         "input_city": "Thành phố",
+        "calculation_summary_title": "Tóm tắt phương pháp tính toán",
+        "calculation_summary_body": """
+        <b>Máy tính tiết kiệm tưới tiêu — Phương pháp tính toán chi phí và tiết kiệm</b><br>
+        Tất cả số liệu và phương pháp tính đều dựa trên các dự án thực tế tại Thái Lan, theo chi tiết trong báo cáo PDF đính kèm.
+        <ul>
+        <li><b>Dữ liệu nhập vào của người dùng:</b> Diện tích, đơn vị, thành phố (khí hậu), số năm, giá nước, loại tiền tệ và phương pháp tưới so sánh</li>
+        <li><b>Hệ số bốc hơi và thoát hơi nước (ET) từng thành phố:</b> ET trung bình năm (mm) dựa theo dữ liệu khí hậu thực tế tại Thái Lan</li>
+        <li><b>Hệ số quy đổi diện tích:</b> Mét vuông (m²), Rai (1.600 m²), Hecta (10.000 m²), Acre (4.046,86 m²)</li>
+        <li><b>Tỷ giá quy đổi tiền tệ:</b> THB, USD, SGD, VND, v.v.</li>
+        <li><b>Hệ số điều chỉnh chi phí xây dựng:</b> Theo từng thành phố, tham chiếu tiêu chuẩn Thái Lan</li>
+        <li><b>Chi phí đầu tư cơ bản cho 1 Rai (theo PDF):</b>
+            <ul>
+            <li>Lao động thủ công: 613.006 THB</li>
+            <li>Xe bồn nước: 2.160.000 THB</li>
+            <li>Tưới tự động/ET-Based: 280.901,4 THB</li>
+            </ul>
+            (Mọi con số chi phí đầu tư đều trích xuất từ bảng số liệu dự án thực tế trong PDF.)
+        </li>
+        <li><b>Hệ số sử dụng nước mỗi năm:</b>
+            <ul>
+            <li>Lao động thủ công: 6× ET</li>
+            <li>Xe bồn nước: 8× ET</li>
+            <li>Tưới tự động: 1,3× ET</li>
+            <li>ET-Based: 1,0× ET</li>
+            </ul>
+        </li>
+        <li><b>Tỷ lệ chi phí vận hành (OPEX):</b> Lao động 40%, điện 30%, nước 30% (theo chi tiết PDF)</li>
+        <li><b>Tiết kiệm CO₂:</b> Tính theo 0,5 tấn CO₂ cho mỗi 1.000 m³ nước tiết kiệm</li>
+        </ul>
+        <p><i>Mọi số liệu đều được lấy từ bảng chi phí thực tế và kinh nghiệm dự án, theo chi tiết trong 
+        <a href="https://github.com/alexangi/Rain_Bird_Irrigation_Savings_Calculator/blob/375a526e58e82d1c39c9a79a1ed5e80805d185dc/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%99%E0%B8%B3%E0%B9%80%E0%B8%AA%E0%B8%99%E0%B8%AD%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%9B%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B8%A3%E0%B8%94%E0%B8%99%E0%B9%89%E0%B8%B5%E0%B8%95.pdf" target="_blank">báo cáo PDF gốc (tiếng Thái)</a>.
+        </i></p>
+        """,
         "water_efficiency": "Hiệu Quả Sử Dụng Nước",
         "water_efficiency_benefit": "Giảm lượng nước sử dụng và nâng cao tính bền vững",
         "environmental_impact_benefit": "Giảm phát thải khí CO₂",
@@ -320,6 +419,39 @@ TRANSLATIONS = {
         "annual_savings": "Penghematan Tahunan",
         "total_savings": "Total Penghematan",
         "capex_diff": "Perbedaan CapEx",
+        "calculation_summary_title": "Ringkasan Perhitungan",
+        "calculation_summary_body": """
+        <b>Kalkulator Penghematan Irigasi — Cara Perhitungan Biaya & Penghematan</b><br>
+        Seluruh angka dan metode perhitungan diambil dari proyek nyata lanskap di Thailand, seperti dijelaskan dalam laporan PDF terlampir.
+        <ul>
+        <li><b>Input Pengguna:</b> Luas area, satuan, kota (iklim), jumlah tahun, harga air, mata uang, serta metode irigasi yang dibandingkan</li>
+        <li><b>Data Evapotranspirasi (ET) Kota:</b> ET rata-rata tahunan (mm) berdasarkan data iklim kota di Thailand</li>
+        <li><b>Konversi Satuan Area:</b> Meter persegi (m²), Rai (1.600 m²), Hektar (10.000 m²), Acre (4.046,86 m²)</li>
+        <li><b>Kurs Mata Uang:</b> THB, USD, SGD, VND, dan lain-lain</li>
+        <li><b>Koefisien Biaya Konstruksi:</b> Faktor pengali khusus kota, mengacu pada standar biaya Thailand</li>
+        <li><b>Biaya Modal Dasar per 1 Rai (berdasarkan PDF):</b>
+            <ul>
+            <li>Tenaga kerja manual: 613.006 THB</li>
+            <li>Truk air: 2.160.000 THB</li>
+            <li>Otomatis/ET-Based: 280.901,4 THB</li>
+            </ul>
+            (Seluruh data biaya modal diambil langsung dari tabel proyek nyata pada PDF.)
+        </li>
+        <li><b>Faktor Penggunaan Air (per tahun):</b>
+            <ul>
+            <li>Manual: 6× ET</li>
+            <li>Truk air: 8× ET</li>
+            <li>Otomatis: 1,3× ET</li>
+            <li>ET-Based: 1,0× ET</li>
+            </ul>
+        </li>
+        <li><b>Proporsi Biaya Operasional (OPEX):</b> Tenaga kerja 40%, listrik 30%, air 30% (mengacu rincian pada PDF)</li>
+        <li><b>Penghematan CO₂:</b> Dihitung 0,5 ton CO₂ untuk setiap 1.000 m³ air yang dihemat</li>
+        </ul>
+        <p><i>Semua angka dan metode diambil dari tabel biaya proyek nyata dan pengalaman lapangan, sesuai detail pada 
+        <a href="https://github.com/alexangi/Rain_Bird_Irrigation_Savings_Calculator/blob/375a526e58e82d1c39c9a79a1ed5e80805d185dc/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%99%E0%B8%B3%E0%B9%80%E0%B8%AA%E0%B8%99%E0%B8%AD%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%9B%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B8%A3%E0%B8%94%E0%B8%99%E0%B9%89%E0%B8%B5%E0%B8%95.pdf" target="_blank">laporan PDF resmi (bahasa Thai)</a>.
+        </i></p>
+        """,
         "calculate_button": "🔄 Hitung",
         "payback": "Periode Pengembalian Modal",
         "co2_saving": "Pengurangan CO₂",
