@@ -98,7 +98,7 @@ TRANSLATIONS = {
         <li><b>CO₂ Savings:</b> Calculated as 0.5 tons per 1,000 m³ water saved.</li>
         </ul>
         <p><i>All figures are sourced from actual cost tables and project experience, as detailed in the 
-        <a href="https://github.com/alexangi/Rain_Bird_Irrigation_Savings_Calculator/raw/375a526e58e82d1c39c9a79a1ed5e80805d185dc/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%99%E0%B8%B3%E0%B9%80%E0%B8%AA%E0%B8%99%E0%B8%AD%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%9B%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B8%A3%E0%B8%94%E0%B8%99%E0%B9%89%E0%B8%B5%E0%B8%95.pdf" target="_blank" download>official PDF report (Thai)</a>.
+        <a href="%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%99%E0%B8%B3%E0%B9%80%E0%B8%AA%E0%B8%99%E0%B8%AD%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%9B%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B8%A3%E0%B8%94%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95.pdf" target="_blank" download>official PDF report (Thai)</a>.
         </i></p>
         """,
         "city_coefficient": "City Cost Coefficient",
@@ -176,7 +176,7 @@ TRANSLATIONS = {
         <li><b>การประหยัดคาร์บอนไดออกไซด์ (CO₂):</b> คำนวณจากน้ำที่ประหยัดได้ 1,000 ลบ.ม. = 0.5 ตัน CO₂</li>
         </ul>
         <p><i>ตัวเลขและสูตรทั้งหมดมาจากตารางต้นทุนจริงและประสบการณ์โครงการ ตามรายละเอียดใน 
-        <a href="https://github.com/alexangi/Rain_Bird_Irrigation_Savings_Calculator/raw/375a526e58e82d1c39c9a79a1ed5e80805d185dc/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%99%E0%B8%B3%E0%B9%80%E0%B8%AA%E0%B8%99%E0%B8%AD%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%9B%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B8%A3%E0%B8%94%E0%B8%99%E0%B9%89%E0%B8%B5%E0%B8%95.pdf" target="_blank" download>รายงาน PDF ฉบับจริง (ภาษาไทย)</a>
+        <a href="%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%99%E0%B8%B3%E0%B9%80%E0%B8%AA%E0%B8%99%E0%B8%AD%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%9B%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B8%A3%E0%B8%94%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95.pdf" target="_blank" download>รายงาน PDF ฉบับจริง (ภาษาไทย)</a>
         </i></p>
         """,
         "exec_summary": "สรุปการบริหาร",
@@ -287,7 +287,7 @@ TRANSLATIONS = {
         <li><b>Tiết kiệm CO₂:</b> Tính theo 0,5 tấn CO₂ cho mỗi 1.000 m³ nước tiết kiệm</li>
         </ul>
         <p><i>Mọi số liệu đều được lấy từ bảng chi phí thực tế và kinh nghiệm dự án, theo chi tiết trong 
-        <a href="https://github.com/alexangi/Rain_Bird_Irrigation_Savings_Calculator/raw/375a526e58e82d1c39c9a79a1ed5e80805d185dc/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%99%E0%B8%B3%E0%B9%80%E0%B8%AA%E0%B8%99%E0%B8%AD%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%9B%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B8%A3%E0%B8%94%E0%B8%99%E0%B9%89%E0%B8%B5%E0%B8%95.pdf" target="_blank">báo cáo PDF gốc (tiếng Thái)</a>.
+        <a href="%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%99%E0%B8%B3%E0%B9%80%E0%B8%AA%E0%B8%99%E0%B8%AD%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%9B%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B8%A3%E0%B8%94%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95.pdf" target="_blank">báo cáo PDF gốc (tiếng Thái)</a>.
         </i></p>
         """,
         "water_efficiency": "Hiệu Quả Sử Dụng Nước",
