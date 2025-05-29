@@ -538,6 +538,8 @@ def main():
             'ET-Based': get_label(labels, 'method_etbased')
         }
         method_map_rev = {v: k for k, v in method_map.items()}
+
+
         # >>>>>>>>>>>> MOVE THIS UP <<<<<<<<<<<<<<
 
         # Project inputs with translated labels
@@ -566,6 +568,11 @@ def main():
             """,
             unsafe_allow_html=True
         )
+
+        with st.expander(get_label(labels, 'calculation_summary_title'), expanded=False):
+            st.markdown(get_label(labels, 'calculation_summary_body'), unsafe_allow_html=True)
+        
+
 
     # method_map and method_map_rev need to use the updated labels, so move this after lang selection
     method_map = {
