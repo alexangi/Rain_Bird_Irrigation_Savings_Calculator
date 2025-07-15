@@ -9,7 +9,6 @@ import numpy as np
 from datetime import date
 
 os.environ["STREAMLIT_TELEMETRY_ENABLED"] = "0"
-streamlit run app.py --server.enableStaticServing=False --server.enableCORS=True
 
 
 # Import the translations from the external file
