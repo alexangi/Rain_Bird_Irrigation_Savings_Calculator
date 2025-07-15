@@ -8,6 +8,8 @@ import pandas as pd
 import numpy as np
 from datetime import date
 
+os.environ["STREAMLIT_TELEMETRY_ENABLED"] = "0"
+
 # Import the translations from the external file
 from irrigation_app_translations import TRANSLATIONS
 
