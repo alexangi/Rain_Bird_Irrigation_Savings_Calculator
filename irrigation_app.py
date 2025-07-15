@@ -731,4 +731,10 @@ if __name__ == '__main__':
     # Button export color styling
     main()  # Main function call is properly indented
 
+st.markdown("""
+<div style='background-color:#fff8e1;padding:10px 20px;border-radius:6px;border:1px solid #ffecb3;margin-bottom:15px;'>
+🍪 This app uses a minimal cookie (_streamlit_xsrf) for security. No tracking, no 3rd-party analytics.
+</div>
+""", unsafe_allow_html=True)
+
 
