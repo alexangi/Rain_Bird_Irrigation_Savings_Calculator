@@ -353,58 +353,64 @@ def get_inputs():
 
     return client, area, unit, years, currency, water_price, city, lang, labels
 
-# ---------- CALCULATE COSTS ----------
+# ---------- CALCULATE COSTS (UPDATED) ----------
 @st.cache_data
+
 def calculate_costs(area, unit, years, city, price, currency):
     if city not in ET_DATA:
         st.error(f"City '{city}' not found in ET data. Please select a valid city.")
         return None, None, None, None, None
 
-    # Get the infrastructure coefficient for the selected city
     city_coefficient = updated_city_coefficients_reviewed.get(city, 1.0)
-
-    # Store city_coefficient in session_state for later use
-    st.session_state.city_coefficient = city_coefficient  # Store it for later use in the summary
+    st.session_state.city_coefficient = city_coefficient
 
     et_mm = ET_DATA[city]
     m2 = area * UNIT_MULTIPLIERS[unit]
     et_m3 = et_mm * m2 / 1000
 
-    # Calculate water usage per year for each method
+    # PDF-aligned water usage multipliers
     usage_per_year = {
-        'Manual': et_m3 * 6,
-        'Truck': et_m3 * 8,
-        'Auto': et_m3 * 1.3,
-        'ET-Based': et_m3 * 1.0
+        'Manual': et_m3 * 1.43,       # 2,920 m³/year vs 2048 baseline
+        'Truck': et_m3 * 1.9,         # ~3,893 m³/year vs 2048 baseline
+        'Auto': et_m3 * 0.98,         # ~2,000 m³/year
+        'ET-Based': et_m3 * 0.78      # Exact match to 1,600 m³/year
     }
 
-    # Calculate the total water usage across all methods for the given years
     usage = {m: round(v * years, 2) for m, v in usage_per_year.items()}
 
-    # Base capital costs for each method
-    bases = {'Manual': 613006, 'Truck': 2160000, 'Auto': 280901.4, 'ET-Based': 280901.4}
+    # Base capital costs (same as PDF)
+    bases = {
+        'Manual': 613006,
+        'Truck': 2160000,
+        'Auto': 280901.4,
+        'ET-Based': 280901.4
+    }
 
-    # Exchange rate for currency conversion
     rate = EXCHANGE_RATES_FALLBACK[currency]
 
-    # Adjust capital costs by multiplying with the city coefficient
-    capital = {m: round(bases[m] * (m2 / UNIT_MULTIPLIERS['Rai']) * rate * city_coefficient, 2) for m in bases}
+    capital = {
+        m: round(bases[m] * (m2 / UNIT_MULTIPLIERS['Rai']) * rate * city_coefficient, 2)
+        for m in bases
+    }
 
-    # Operational costs
-    labor_cost = 0.4
-    electricity_cost = 0.3
-    water_cost_ratio = 0.3
+    # Explicit fixed cost model per method (based on PDF data, converted from THB if needed)
+    def convert(amount):
+        return round(amount * rate * (m2 / 1600), 2)  # scaled by area and currency
 
-    # Calculate operational expenses per year for each method
-    opex_per_year = {m: round(usage_per_year[m] * price * (labor_cost + electricity_cost + water_cost_ratio), 2) for m in usage_per_year}
+    opex_per_year = {
+        'Manual': convert(30000 * 12 + 3360 * 12 + 968 * 12 + 200 * 12),
+        'Truck': convert(24000 * 12 + 3105 * 12 + 3360 * 12 + 5000 * 12),
+        'Auto': convert(0 + 3360 * 12 + 660 * 12 + 500 * 12),
+        'ET-Based': convert(0 + 3360 * 12 + 660 * 12 + 500 * 12)
+    }
 
-    # Calculate total operational expenses over the given number of years
     opex = {m: round(opex_per_year[m] * years, 2) for m in opex_per_year}
 
-    # Total cost is capital plus operational expenses
-    total = {m: round(capital[m] + opex_per_year[m] * years, 2) for m in usage_per_year}
+    total = {
+        m: round(capital[m] + opex[m], 2)
+        for m in usage_per_year
+    }
 
-    # Store results in session state for further use
     st.session_state.calc_results = {
         'usage_per_year': usage_per_year,
         'usage': usage,
@@ -413,7 +419,6 @@ def calculate_costs(area, unit, years, city, price, currency):
         'opex_per_year': opex_per_year
     }
 
-    # Return all calculated values
     return usage_per_year, usage, total, capital, opex_per_year
 
 
