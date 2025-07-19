@@ -359,7 +359,7 @@ def get_inputs():
 def calculate_costs(area, unit, years, city, price, currency):
     if city not in ET_DATA:
         st.error(f"City '{city}' not found in ET data. Please select a valid city.")
-        return None, None, None, None, None
+        return None, None, None, None, None, None
 
     city_coefficient = updated_city_coefficients_reviewed.get(city, 1.0)
     st.session_state.city_coefficient = city_coefficient
@@ -370,15 +370,15 @@ def calculate_costs(area, unit, years, city, price, currency):
 
     # PDF-aligned water usage multipliers
     usage_per_year = {
-        'Manual': et_m3 * 1.43,       # 2,920 m³/year vs 2048 baseline
-        'Truck': et_m3 * 1.9,         # ~3,893 m³/year vs 2048 baseline
-        'Auto': et_m3 * 0.98,         # ~2,000 m³/year
-        'ET-Based': et_m3 * 0.78      # Exact match to 1,600 m³/year
+        'Manual': et_m3 * 1.43,
+        'Truck': et_m3 * 1.9,
+        'Auto': et_m3 * 0.98,
+        'ET-Based': et_m3 * 0.78
     }
 
     usage = {m: round(v * years, 2) for m, v in usage_per_year.items()}
 
-    # Base capital costs (same as PDF)
+    # Base capital costs
     bases = {
         'Manual': 613006,
         'Truck': 2160000,
@@ -393,15 +393,14 @@ def calculate_costs(area, unit, years, city, price, currency):
         for m in bases
     }
 
-    # Explicit fixed cost model per method (based on PDF data, converted from THB if needed)
     def convert(amount):
-        return round(amount * rate * (m2 / 1600), 2)  # scaled by area and currency
+        return round(amount * rate * (m2 / 1600), 2)
 
     opex_per_year = {
         'Manual': convert(30000 * 12 + 3360 * 12 + 968 * 12 + 200 * 12),
         'Truck': convert(24000 * 12 + 3105 * 12 + 3360 * 12 + 5000 * 12),
-        'Auto': convert(0 + 3360 * 12 + 660 * 12 + 500 * 12),
-        'ET-Based': convert(0 + 3360 * 12 + 660 * 12 + 500 * 12)
+        'Auto': convert(3360 * 12 + 660 * 12 + 500 * 12),
+        'ET-Based': convert(3360 * 12 + 660 * 12 + 500 * 12)
     }
 
     opex = {m: round(opex_per_year[m] * years, 2) for m in opex_per_year}
@@ -411,16 +410,34 @@ def calculate_costs(area, unit, years, city, price, currency):
         for m in usage_per_year
     }
 
+    # CO2 calculations (kg/year)
+    def co2_water(usage_m3):
+        return usage_m3 * 0.344
+
+    def co2_electricity(kwh):
+        return kwh * 0.43
+
+    def co2_diesel(litres):
+        return litres * 2.68
+
+    # Annual CO2 emissions per method
+    co2_per_year = {
+        'Manual': round(co2_water(usage_per_year['Manual']) + co2_electricity(220 * 12 * (m2 / 1600)), 2),
+        'Truck': round(co2_water(usage_per_year['Truck']) + co2_diesel(90 * 30 * 12 * (m2 / 1600)), 2),
+        'Auto': round(co2_water(usage_per_year['Auto']) + co2_electricity(150 * 12 * (m2 / 1600)), 2),
+        'ET-Based': round(co2_water(usage_per_year['ET-Based']) + co2_electricity(150 * 12 * (m2 / 1600)), 2)
+    }
+
     st.session_state.calc_results = {
         'usage_per_year': usage_per_year,
         'usage': usage,
         'total': total,
         'capital': capital,
-        'opex_per_year': opex_per_year
+        'opex_per_year': opex_per_year,
+        'co2_per_year': co2_per_year
     }
 
-    return usage_per_year, usage, total, capital, opex_per_year
-
+    return usage_per_year, usage, total, capital, opex_per_year, co2_per_year
 
 # ---------------------------- Matplotlib and Chart Setup ----------------------------
 # Force Matplotlib to use English labels and font
