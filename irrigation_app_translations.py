@@ -71,7 +71,7 @@ TRANSLATIONS = {
         "calculation_summary_title": "Calculation Summary",
         "calculation_summary_body": """
         <b>Irrigation Savings Calculator — How Your Savings Are Calculated</b><br>
-        All figures and methodology are based on real-life Thai landscape projects, as detailed in the official report (see enclosed PDF).
+        All figures are sourced from actual cost tables, project experience, and real world observations, exemples detailed in this report (see enclosed PDF).
         <ul>
         <li><b>User Inputs:</b> Area, unit, city (climate), years, water price, currency, and irrigation methods.</li>
         <li><b>City Evapotranspiration (ET):</b> Annual average ET (mm), per city, as per Thai climate data.</li>
