@@ -616,8 +616,9 @@ def main():
 
         if calculate_button:
             # Ensure that costs are calculated first when the button is pressed
-            usage_per_year, usage, total, capital, opex_per_year = calculate_costs(
-                area, unit, years, city, water_price, currency
+            usage_per_year, usage, total, capital, opex_per_year, co2_per_year = calculate_costs(
+            area, unit, years, city, price, currency
+            )
             )
 
             # Calculate savings and metrics
