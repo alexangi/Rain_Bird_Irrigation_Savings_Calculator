@@ -97,8 +97,8 @@ TRANSLATIONS = {
         <li><b>OPEX Split:</b> Labor 40%, Electricity 30%, Water 30% (reflecting the PDF’s breakdown).</li>
         <li><b>CO₂ Savings:</b> Calculated as 0.5 tons per 1,000 m³ water saved.</li>
         </ul>
-        <p><i>All figures are sourced from actual cost tables and project experience, as detailed in the 
-        <a href="https://github.com/alexangi/Rain_Bird_Irrigation_Savings_Calculator/raw/375a526e58e82d1c39c9a79a1ed5e80805d185dc/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%99%E0%B8%B3%E0%B9%80%E0%B8%AA%E0%B8%99%E0%B8%AD%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%9B%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B8%A3%E0%B8%94%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95.pdf" target="_blank" download>official PDF report (Thai)</a>.
+        <p><i>All figures are sourced from actual cost tables, project experience, and real world observations, exemples detailed in this 
+        <a href="https://github.com/alexangi/Rain_Bird_Irrigation_Savings_Calculator/raw/375a526e58e82d1c39c9a79a1ed5e80805d185dc/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%99%E0%B8%B3%E0%B9%80%E0%B8%AA%E0%B8%99%E0%B8%AD%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%9B%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B8%A3%E0%B8%94%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95.pdf" target="_blank" download>case study PDF report (Thai)</a>.
         </i></p>
         """,
         "city_coefficient": "City Cost Coefficient",
@@ -175,8 +175,8 @@ TRANSLATIONS = {
         <li><b>สัดส่วนค่าใช้จ่ายผันแปร (OPEX):</b> แรงงาน 40% ไฟฟ้า 30% น้ำ 30% (อิงตามรายงาน PDF)</li>
         <li><b>การประหยัดคาร์บอนไดออกไซด์ (CO₂):</b> คำนวณจากน้ำที่ประหยัดได้ 1,000 ลบ.ม. = 0.5 ตัน CO₂</li>
         </ul>
-        <p><i>ตัวเลขและสูตรทั้งหมดมาจากตารางต้นทุนจริงและประสบการณ์โครงการ ตามรายละเอียดใน 
-        <a href="https://github.com/alexangi/Rain_Bird_Irrigation_Savings_Calculator/raw/375a526e58e82d1c39c9a79a1ed5e80805d185dc/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%99%E0%B8%B3%E0%B9%80%E0%B8%AA%E0%B8%99%E0%B8%AD%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%9B%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B8%A3%E0%B8%94%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95.pdf" target="_blank" download>รายงาน PDF ฉบับจริง (ภาษาไทย)</a>
+        <p><i>ตัวเลขทั้งหมดในหน้านี้มาจากตารางต้นทุนจริง ประสบการณ์จากโครงการ และการสังเกตการณ์ในสถานการณ์จริง ตัวอย่างรายละเอียดอยู่ใน
+        <a href="https://github.com/alexangi/Rain_Bird_Irrigation_Savings_Calculator/raw/375a526e58e82d1c39c9a79a1ed5e80805d185dc/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%99%E0%B8%B3%E0%B9%80%E0%B8%AA%E0%B8%99%E0%B8%AD%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%9B%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B8%A3%E0%B8%94%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95.pdf" target="_blank" download>รายงานกรณีศึกษา (ภาษาไทย)</a>.
         </i></p>
         """,
         "exec_summary": "สรุปการบริหาร",
@@ -286,8 +286,8 @@ TRANSLATIONS = {
         <li><b>Tỷ lệ chi phí vận hành (OPEX):</b> Lao động 40%, điện 30%, nước 30% (theo chi tiết PDF)</li>
         <li><b>Tiết kiệm CO₂:</b> Tính theo 0,5 tấn CO₂ cho mỗi 1.000 m³ nước tiết kiệm</li>
         </ul>
-        <p><i>Mọi số liệu đều được lấy từ bảng chi phí thực tế và kinh nghiệm dự án, theo chi tiết trong 
-        <a href="https://github.com/alexangi/Rain_Bird_Irrigation_Savings_Calculator/raw/375a526e58e82d1c39c9a79a1ed5e80805d185dc/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%99%E0%B8%B3%E0%B9%80%E0%B8%AA%E0%B8%99%E0%B8%AD%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%9B%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B8%A3%E0%B8%94%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95.pdf" target="_blank">báo cáo PDF gốc (tiếng Thái)</a>.
+        <p><i>Tất cả các số liệu đều được lấy từ bảng chi phí thực tế, kinh nghiệm dự án và quan sát thực tế. Ví dụ chi tiết được trình bày trong 
+        <a href="https://github.com/alexangi/Rain_Bird_Irrigation_Savings_Calculator/raw/375a526e58e82d1c39c9a79a1ed5e80805d185dc/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%99%E0%B8%B3%E0%B9%80%E0%B8%AA%E0%B8%99%E0%B8%AD%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%9B%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B8%A3%E0%B8%94%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95.pdf" target="_blank" download>báo cáo nghiên cứu điển hình (Tiếng Việt)</a>.
         </i></p>
         """,
         "water_efficiency": "Hiệu Quả Sử Dụng Nước",
@@ -448,8 +448,8 @@ TRANSLATIONS = {
         <li><b>Proporsi Biaya Operasional (OPEX):</b> Tenaga kerja 40%, listrik 30%, air 30% (mengacu rincian pada PDF)</li>
         <li><b>Penghematan CO₂:</b> Dihitung 0,5 ton CO₂ untuk setiap 1.000 m³ air yang dihemat</li>
         </ul>
-        <p><i>Semua angka dan metode diambil dari tabel biaya proyek nyata dan pengalaman lapangan, sesuai detail pada 
-        <a href="https://github.com/alexangi/Rain_Bird_Irrigation_Savings_Calculator/blob/375a526e58e82d1c39c9a79a1ed5e80805d185dc/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%99%E0%B8%B3%E0%B9%80%E0%B8%AA%E0%B8%99%E0%B8%AD%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%9B%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B8%A3%E0%B8%94%E0%B8%99%E0%B9%89%E0%B8%B5%E0%B8%95.pdf" target="_blank">laporan PDF resmi (bahasa Thai)</a>.
+        <p><i>Semua angka bersumber dari tabel biaya aktual, pengalaman proyek, dan pengamatan di dunia nyata. Contoh lengkap dijelaskan dalam
+        <a href="https://github.com/alexangi/Rain_Bird_Irrigation_Savings_Calculator/raw/375a526e58e82d1c39c9a79a1ed5e80805d185dc/%E0%B8%A3%E0%B8%B2%E0%B8%A2%E0%B8%87%E0%B8%B2%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%99%E0%B8%B3%E0%B9%80%E0%B8%AA%E0%B8%99%E0%B8%AD%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%9B%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B9%80%E0%B8%97%E0%B8%B5%E0%B8%A2%E0%B8%9A%E0%B8%A3%E0%B8%B0%E0%B8%9A%E0%B8%9A%E0%B8%A3%E0%B8%94%E0%B8%99%E0%B9%89%E0%B8%B3%E0%B8%95.pdf" target="_blank" download>laporan studi kasus (Bahasa Indonesia)</a>.
         </i></p>
         """,
         "calculate_button": "🔄 Hitung",
