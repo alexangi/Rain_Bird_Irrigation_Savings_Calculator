@@ -259,7 +259,7 @@ EXCHANGE_RATES_FALLBACK = {
 
 # Define the construction cost coefficients for each city
 updated_city_coefficients_reviewed = {
-    "Bangkok": 1,
+    "Bangkok": 1.0,
     "Jakarta": 2.5,
     "Kuala Lumpur": 2.5,
     "Manila": 4,
@@ -289,7 +289,7 @@ updated_city_coefficients_reviewed = {
 # ---------------------------- Initialize Session State ----------------------------
 def initialize_session_state():
     if 'inputs' not in st.session_state:
-        st.session_state.inputs = {'client': '', 'unit': 'm²', 'area': 1600.0, 'city': 'Bangkok', 'years': 5, 'currency': 'USD', 'water_price': 10.5}
+        st.session_state.inputs = {'client': '', 'unit': 'm²', 'area': 1600.0, 'city': 'Bangkok', 'years': 5, 'currency': 'THB', 'water_price': 10.5}
     if 'lang' not in st.session_state:
         st.session_state.lang = 'English'  # Default language
     if 'calc_results' not in st.session_state:
@@ -727,6 +727,7 @@ def main():
 if __name__ == '__main__':
     # Button export color styling
     main()  # Main function call is properly indented
+
 
 
 
