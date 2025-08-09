@@ -218,7 +218,7 @@ def apply_styles():
 # ---------- CONSTANTS ----------
 ET_DATA = {
     "Bangkok": 1280,
-    "Jakarta": 1135,
+    "Jakarta": 1235,
     "Kuala Lumpur": 1300,
     "Manila": 1370,
     "Singapore": 1200,
@@ -253,13 +253,13 @@ EXCHANGE_RATES_FALLBACK = {
     'SGD': 0.038, 
     'THB': 1.0, 
     'VND': 735.0, 
-    'IDR': 420.0, 
+    'IDR': 500.0, 
     'PHP': 1.5
 }
 
 # Define the construction cost coefficients for each city
 updated_city_coefficients_reviewed = {
-    "Bangkok": 1.0,
+    "Bangkok": 2.0,
     "Jakarta": 2.5,
     "Kuala Lumpur": 2.5,
     "Manila": 4,
@@ -727,6 +727,7 @@ def main():
 if __name__ == '__main__':
     # Button export color styling
     main()  # Main function call is properly indented
+
 
 
 
