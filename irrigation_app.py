@@ -259,7 +259,7 @@ EXCHANGE_RATES_FALLBACK = {
 
 # Define the construction cost coefficients for each city
 updated_city_coefficients_reviewed = {
-    "Bangkok": 2.2,
+    "Bangkok": 1,
     "Jakarta": 2.5,
     "Kuala Lumpur": 2.5,
     "Manila": 4,
@@ -727,5 +727,6 @@ def main():
 if __name__ == '__main__':
     # Button export color styling
     main()  # Main function call is properly indented
+
 
 
