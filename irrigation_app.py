@@ -598,8 +598,10 @@ def main():
             # Calculate savings and metrics
             annual_savings = round(opex_per_year[base_method] - opex_per_year[comp_method], 2) if base_method != comp_method else 0
             total_savings = annual_savings * years
-            capex_diff = capital[base_method] - capital[comp_method]
-            payback = f"{round(capex_diff / annual_savings, 1)}" if (annual_savings > 0 and capex_diff > 0) else 'N/A'
+            capex_diff_base = ((bases[base_method] - bases[comp_method]) 
+                    * (m2 / UNIT_MULTIPLIERS['Rai']) * rate)
+            payback = (f"{round(capex_diff_base / annual_savings, 1)}"
+                    if (annual_savings > 0 and capex_diff_base > 0) else 'N/A')
             co2_saving = round((usage_per_year[base_method] - usage_per_year[comp_method]) * years * 0.5, 2) if base_method != comp_method else 0
 
             # Save results to session state
@@ -727,6 +729,7 @@ def main():
 if __name__ == '__main__':
     # Button export color styling
     main()  # Main function call is properly indented
+
 
 
 
