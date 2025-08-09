@@ -546,7 +546,7 @@ def main():
         city = st.selectbox(get_label(labels, 'input_city'), options=list(ET_DATA.keys()), index=0)
         unit = st.selectbox(get_label(labels, 'input_unit'), options=list(UNIT_MULTIPLIERS.keys()), index=0)
         area = st.number_input(get_label(labels, 'input_area'), min_value=0.0, value=1600.0)
-        years = st.slider(get_label(labels, 'input_years'), min_value=1, max_value=30, value=5)
+        years = st.slider(get_label(labels, 'input_years'), min_value=1, max_value=30, value=3)
         currency = st.selectbox(get_label(labels, 'input_currency'), options=list(EXCHANGE_RATES_FALLBACK.keys()), index=0)
         water_price = st.number_input(get_label(labels, 'input_water_cost'), min_value=0.0, value=10.5)
         client = st.text_input(get_label(labels, 'input_client'), "Unnamed Project")
@@ -727,6 +727,7 @@ def main():
 if __name__ == '__main__':
     # Button export color styling
     main()  # Main function call is properly indented
+
 
 
 
